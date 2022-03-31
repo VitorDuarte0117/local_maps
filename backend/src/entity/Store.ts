@@ -1,5 +1,6 @@
-import { Column, PrimaryGeneratedColumn } from "typeorm";
+import { Column, PrimaryGeneratedColumn, Entity } from "typeorm";
 
+@Entity()
 export class Store {
     @PrimaryGeneratedColumn("uuid")
     id: string;
@@ -14,7 +15,7 @@ export class Store {
     category: string;
 
     @Column("varchar")
-    contacts: string;
+    contact: string;
 
     @Column("double precision")
     latitude: number;

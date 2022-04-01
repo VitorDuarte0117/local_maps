@@ -3,7 +3,8 @@ import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import New from "./pages/New";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
     const theme = {
         primary: "#322153",
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/new" element={<New />} />
                 </Routes>
             </BrowserRouter>
+            <ToastContainer />
         </ThemeProvider>
     );
 }
